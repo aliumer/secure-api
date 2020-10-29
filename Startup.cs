@@ -53,6 +53,7 @@ namespace PtcApi
             services.AddAuthorization(cfg =>
             {
                 cfg.AddPolicy("CanAccessProducts", p => { p.RequireClaim("CanAccessProducts", "true"); });
+                cfg.AddPolicy("CanAccessAdmin", p => { p.RequireClaim("CanAccessAdmin", "true"); });
             });
 
             services.AddMvc()

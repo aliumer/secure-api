@@ -12,6 +12,7 @@ namespace PtcApi.Model
         public Guid ClaimId { get; set; }
 
         [Required()]
+        [ForeignKey("UserId")]
         public Guid UserId { get; set; }
 
         [Required()]
@@ -19,5 +20,6 @@ namespace PtcApi.Model
 
         [Required()]
         public string ClaimValue { get; set; }
+
   }
 }
